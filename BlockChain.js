@@ -41,6 +41,5 @@ chain.addBlock(new Block(2,0));
 console.log(JSON.stringify(chain,null,4));
 console.log(chain.isValidChain());
 
-//node --experimental-modules BlockChain.js (for es6 developer)
-//"type": "module", add to package.json
+
 
