@@ -5,9 +5,9 @@ import sha256 from 'crypto-js'
 // block contains several transactions
 export default class Block {
 
-    constructor(data ,previousBlock='' ) {
+    constructor(data,previousBlock ) {
         this.timestamp = new Date();
-        this.transaction = data;
+        this.transactions = data;
         this.previousBlockHash = previousBlock;
         this.Hash = this.hashFunction();
         this.nonce = 0

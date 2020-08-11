@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db3a3eac-2f34-42e8-a2d7-a42352c184be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Transaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Block.js" beforeDir="false" afterPath="$PROJECT_DIR$/Block.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlockChain.js" beforeDir="false" afterPath="$PROJECT_DIR$/BlockChain.js" afterDir="false" />
@@ -72,7 +72,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597141133049</updated>
-      <workItem from="1597141156596" duration="15046000" />
+      <workItem from="1597141156596" duration="20218000" />
+      <workItem from="1597170039745" duration="692000" />
     </task>
     <servers />
   </component>
@@ -84,7 +85,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -92,5 +95,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/BlockChain.js</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
