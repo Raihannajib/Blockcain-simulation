@@ -21,10 +21,10 @@ class BlockChain {
         newBlock.previousBlockHash =  this.lastBlock().Hash  ;
         //for security reason if someone change data
         // newBlock.Hash = newBlock.hashFunction();
+        console.log('Mining block ..... ');
         newBlock.mineBlock(this.difficulty);
         this.chain.push(newBlock);
-        console.log('Mining block ..... ');
-        console.log(newBlock.Hash)
+
     }
 
     isValidChain() {
@@ -37,10 +37,10 @@ class BlockChain {
 
 }
 
-var chain = new BlockChain(2);
+var chain = new BlockChain();
 chain.addBlock(new Block(1,1));
 chain.addBlock(new Block(2,0));
-// console.log(JSON.stringify(chain,null,4));
+console.log(JSON.stringify(chain,null,4));
 // console.log(chain.isValidChain());
 
 

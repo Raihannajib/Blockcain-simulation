@@ -25,7 +25,7 @@ export default class Block {
     //prof-of-work : (mining : put a lot of power to get block )
     //difficulty: hash begin with amount of zeros  (increase difficulty =>more security)
     mineBlock(difficulty) {
-        while (this.Hash.substring(0, difficulty) !== Array(difficulty + 1).fill("0")) {
+        while (this.Hash.substring(0, difficulty) !== Array(difficulty + 1).join("0")) {
             this.nonce++;
             this.Hash = this.hashFunction()
         }
