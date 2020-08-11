@@ -8,12 +8,13 @@ export default class Block {
         this.timestamp = new Date();
         this.data = data;
         this.previousBlockHash = previousBlock;
-        this.Hash = this.hashFunction()
+        this.Hash = this.hashFunction();
+        this.nonce = 0
     }
 
     hashFunction() {
         return sha256.SHA256(
-            JSON.stringify({
+            JSON.stringify(this.nonce + {
                 data: this.data,
                 brother: this.previousBlockHash,
                 time: this.timestamp
@@ -25,6 +26,7 @@ export default class Block {
     //difficulty: hash begin with amount of zeros  (increase difficulty =>more security)
     mineBlock(difficulty) {
         while (this.Hash.substring(0, difficulty) !== Array(difficulty + 1).fill("0")) {
+            this.nonce++;
             this.Hash = this.hashFunction()
         }
         console.log('block mined:'+ this.Hash)

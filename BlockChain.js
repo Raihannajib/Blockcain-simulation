@@ -3,9 +3,9 @@ import Block from './Block.js';
 
 class BlockChain {
 
-    constructor(difficulty) {
+    constructor() {
         this.chain = [this.genesesBlock()];
-        this.difficulty = difficulty
+        this.difficulty = 2
     }
 
     /* A genesis block is the first block of a block chain. Modern versions of Bitcoin number it as block 0*/
@@ -18,11 +18,13 @@ class BlockChain {
     }
 
     addBlock(newBlock) {
-       newBlock.previousBlockHash =  this.lastBlock().Hash  ;
-       //for security reason if someone change data
-       // newBlock.Hash = newBlock.hashFunction();
+        newBlock.previousBlockHash =  this.lastBlock().Hash  ;
+        //for security reason if someone change data
+        // newBlock.Hash = newBlock.hashFunction();
         newBlock.mineBlock(this.difficulty);
-        this.chain.push(newBlock)
+        this.chain.push(newBlock);
+        console.log('Mining block ..... ');
+        console.log(newBlock.Hash)
     }
 
     isValidChain() {
@@ -35,11 +37,11 @@ class BlockChain {
 
 }
 
-var chain = new BlockChain();
+var chain = new BlockChain(2);
 chain.addBlock(new Block(1,1));
 chain.addBlock(new Block(2,0));
-console.log(JSON.stringify(chain,null,4));
-console.log(chain.isValidChain());
+// console.log(JSON.stringify(chain,null,4));
+// console.log(chain.isValidChain());
 
 
 
