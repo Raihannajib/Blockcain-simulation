@@ -1,12 +1,13 @@
 // const SHA256 = require('crypto-js/sha256');
 import sha256 from 'crypto-js'
 
+// block size : 1MB
+// block contains several transactions
 export default class Block {
 
-    constructor(index ,data ,previousBlock='' ) {
-        this.index = index;
+    constructor(data ,previousBlock='' ) {
         this.timestamp = new Date();
-        this.data = data;
+        this.transaction = data;
         this.previousBlockHash = previousBlock;
         this.Hash = this.hashFunction();
         this.nonce = 0
@@ -22,7 +23,6 @@ export default class Block {
         ).toString().toUpperCase()
     }
 
-    //prof-of-work : (mining : put a lot of power to get block )
     //difficulty: hash begin with amount of zeros  (increase difficulty =>more security)
     mineBlock(difficulty) {
         while (this.Hash.substring(0, difficulty) !== Array(difficulty + 1).join("0")) {
