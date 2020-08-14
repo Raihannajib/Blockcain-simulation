@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db3a3eac-2f34-42e8-a2d7-a42352c184be" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Block.js" beforeDir="false" afterPath="$PROJECT_DIR$/Block.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlockChain.js" beforeDir="false" afterPath="$PROJECT_DIR$/BlockChain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KeyGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/KeyGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/Transaction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +74,8 @@
       <workItem from="1597170039745" duration="7879000" />
       <workItem from="1597220024143" duration="162000" />
       <workItem from="1597358434896" duration="1739000" />
-      <workItem from="1597406726282" duration="2089000" />
+      <workItem from="1597406726282" duration="4455000" />
+      <workItem from="1597411258381" duration="15000" />
     </task>
     <servers />
   </component>

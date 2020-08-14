@@ -7,7 +7,7 @@ import BlockChain from "./BlockChain.js";
 import ec from 'elliptic'
 const Ec= new ec.ec('secp256k1'); // use in bitcoin
 
-let chain = new BlockChain(4);
+let chain = new BlockChain(5);
 const user = new User();
 
 
@@ -24,15 +24,12 @@ chain.addTransaction(new Transaction('c','d',50));
 //start mining
 //
 chain.miningPendingTransaction(myWallet);
-console.log(`wallet of minner :  ${chain.getBalance(myWallet)}`);
+console.log(`wallet of minner :  ${chain.getBalance(myWallet)} bitcoin`);
 
 //miner take reward when start in second block
 chain.miningPendingTransaction(myWallet);
-console.log(`walllet of minner ${chain.getBalance(myWallet)}`);
+console.log(`walllet of minner ${chain.getBalance(myWallet)} bitcoin`);
 
-if (chain.isValidChain()){
-    console.log('valid block chain')
-}
 
-console.log('after change a transaction of block inside chain');
-chain.isValidChain()?console.log('valid block chain'):console.log('something wrong inside chain');
+
+// console.log(JSON.stringify(chain,0,4));
