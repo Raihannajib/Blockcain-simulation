@@ -1,9 +1,13 @@
 
 import Block from './Block.js';
 import Transaction from "./Transaction.js";
+import User from './User.js'
 
+
+import ec from 'elliptic'
+const Ec= new ec.ec('secp256k1'); // use in bitcoin
 //blockChain -> Blocks -> transactions
-class BlockChain {
+export default class BlockChain {
 
     constructor(difficulty) {
         this.chain = [this.genesesBlock()];
@@ -16,7 +20,14 @@ class BlockChain {
 
     }
 
-    createTransaction(transaction) {
+    addTransaction(transaction) {
+        if (!(transaction.to && transaction.from)){
+            throw new Error('transaction not complete')
+        }
+        // if (!transaction.isValidTransaction()){
+        //     throw new Error('mal transaction')
+        // }
+
         this.pendingTransaction.push(transaction)
     }
 
@@ -32,6 +43,8 @@ class BlockChain {
         this.chain.push(block);
         this.pendingTransaction = new Array(new Transaction(null,minerAddress,this.miningReward));
     }
+
+
 
     getBalance(address) {
         let balance = 0;
@@ -61,8 +74,7 @@ class BlockChain {
 
     addBlock(newBlock) {
         newBlock.previousBlockHash =  this.lastBlock().Hash  ;
-        console.log('Mining block ..... ');
-        //prof-of-work : (mining : put a lot of power to get block )
+        //prof-of-work : (mining : put a lot of power to get block ) mining
         newBlock.mineBlock(this.difficulty);
         this.chain.push(newBlock);
 
@@ -71,24 +83,16 @@ class BlockChain {
     isValidChain() {
         let len = this.chain.length;
         for (let i=1 ; i<len ; i++) {
-            if ( (this.chain[i].Hash !== this.chain[i].hashFunction()) || (this.chain[i-1].Hash !== this.chain[i].previousBlockHash) ) return false
+            //this.chain[i].hasValidTransaction()
+            if ( ( this.chain[i].Hash !== this.chain[i].hashFunction()) || (this.chain[i-1].Hash !== this.chain[i].previousBlockHash) ) return false
         }
         return true
     }
 
+
+
 }
 
-
-var chain = new BlockChain(1);
-chain.createTransaction(new Transaction('ad1','add2',200));
-chain.createTransaction(new Transaction('ad2','add1',2000));
-//start mining
-chain.miningPendingTransaction('ad_m');
-console.log("Balance of minner: " + chain.getBalance('ad_m'));
-
-//miner take reward when start in second block
-chain.miningPendingTransaction('ad_m');
-console.log("Balance of minner: " + chain.getBalance('ad_m'));
 
 
 

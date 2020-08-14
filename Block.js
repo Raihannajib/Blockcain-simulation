@@ -1,4 +1,3 @@
-// const SHA256 = require('crypto-js/sha256');
 import sha256 from 'crypto-js'
 
 // block size : 1MB
@@ -25,11 +24,21 @@ export default class Block {
 
     //difficulty: hash begin with amount of zeros  (increase difficulty =>more security)
     mineBlock(difficulty) {
+        console.log('start mining .....');
         while (this.Hash.substring(0, difficulty) !== Array(difficulty + 1).join("0")) {
             this.nonce++;
             this.Hash = this.hashFunction()
         }
-        console.log('block mined:'+ this.Hash)
+        console.log('block mined with hash:'+ this.Hash)
+    }
+
+    hasValidTransaction() {
+        for (const tx of this.transactions) {
+            if (!tx.isValidTransaction()){
+                return false;
+            }
+        }
+        return true
     }
 
 }

@@ -6,6 +6,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Block.js" beforeDir="false" afterPath="$PROJECT_DIR$/Block.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlockChain.js" beforeDir="false" afterPath="$PROJECT_DIR$/BlockChain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KeyGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/KeyGenerator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/Transaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +79,10 @@
       <option name="presentableId" value="Default" />
       <updated>1597141133049</updated>
       <workItem from="1597141156596" duration="20218000" />
-      <workItem from="1597170039745" duration="692000" />
+      <workItem from="1597170039745" duration="7879000" />
+      <workItem from="1597220024143" duration="162000" />
+      <workItem from="1597358434896" duration="1739000" />
+      <workItem from="1597406726282" duration="2089000" />
     </task>
     <servers />
   </component>
@@ -101,7 +110,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/BlockChain.js</url>
-          <line>16</line>
+          <line>20</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
